@@ -7,7 +7,7 @@ cd C:\Users\almal\OneDrive\Documents\PYTHON-DOC
 ```
 
 # Step 2: Create application file
-For Flask (example)
+
 Create app.py:
 
 # Step 3: Create requirements file
@@ -32,5 +32,50 @@ COPY app.py .
 EXPOSE 8501
 
 CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+
+```
+
+
+# Step 5: Build Docker image
+
+
+```bash
+docker build -t project1 .
+
+```
+
+# Step 6: Run the container
+
+
+```bash
+
+docker run -d -p 1000:8501 --name project1 project1
+
+```
+
+
+# Step 7: Verify container is running
+
+```bash
+
+docker ps
+
+```
+
+# Step 8: Open in browser
+
+Go to:
+
+```bash
+
+http://localhost:1000
+
+```
+
+You should see:
+
+```bash
+
+Dockerfile Builder Helper
 
 ```
